@@ -1,11 +1,25 @@
-To install dependencies:
-```sh
+# country-api
+
+- Development
+
+```
 bun install
 ```
 
-To run:
-```sh
-bun run dev
+- Production
+
+```
+bun run build
 ```
 
-open http://localhost:3000
+```
+bun run start
+```
+
+- Docker
+
+```
+docker-compose up -d
+```
+
+Then open http://localhost:3000
