@@ -1,0 +1,122 @@
+{
+  "name": "country-api",
+  "version": "1",
+  "items": [
+    {
+      "type": "http",
+      "name": "countries get",
+      "filename": "countries get.bru",
+      "seq": 2,
+      "request": {
+        "url": "http://localhost:3000/countries",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "countries post",
+      "filename": "countries post.bru",
+      "seq": 3,
+      "request": {
+        "url": "http://localhost:3000/countries",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"rank\": 193,\n  \"capital\": \"test_capital\",\n  \"country\": \"test_country\",\n  \"population\": \"test_population\"\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "coutry put",
+      "filename": "coutry put.bru",
+      "seq": 4,
+      "request": {
+        "url": "http://localhost:3000/countries/0",
+        "method": "PUT",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"rank\": 193,\n  \"capital\": \"test_capital2\",\n  \"country\": \"test_country2\",\n  \"population\": \"test_population2\"\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "country get",
+      "filename": "country get.bru",
+      "seq": 5,
+      "request": {
+        "url": "http://localhost:3000/countries/5",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    }
+  ],
+  "environments": [],
+  "brunoConfig": {
+    "version": "1",
+    "name": "country-api",
+    "type": "collection",
+    "ignore": [
+      "node_modules",
+      ".git"
+    ]
+  }
+}
