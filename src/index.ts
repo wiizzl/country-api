@@ -47,7 +47,8 @@ app.openapi(
     summary: "Create a new country",
     requestBody: {
       required: true,
-      content: { "application/json": { schema: {} } },
+      // https://github.com/honojs/hono/issues/3594
+      content: { "application/json": { schema: { type: "object" } } },
     },
     responses: {
       201: {
@@ -118,6 +119,7 @@ app.openapi(
     ],
     requestBody: {
       required: true,
+      // https://github.com/honojs/hono/issues/3594
       content: { "application/json": { schema: { type: "object" } } },
     },
     responses: {
