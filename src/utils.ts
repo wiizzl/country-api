@@ -11,7 +11,7 @@ async function getCsvData(filePath: string) {
   const text = await getFileContent(filePath);
 
   const lines = text.split("\n");
-  const dataLines = lines.slice(1); // remove the header line
+  const dataLines = lines.slice(1);
 
   return dataLines.map((line) => {
     const values = line.split(",");

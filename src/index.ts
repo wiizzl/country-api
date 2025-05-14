@@ -47,8 +47,22 @@ app.openapi(
     summary: "Create a new country",
     requestBody: {
       required: true,
-      // https://github.com/honojs/hono/issues/3594
-      content: { "application/json": { schema: { type: "object" } } },
+      content: {
+        "application/json": {
+          // I wanted to use dynamic zod schema but had to do it manually
+          // https://github.com/honojs/hono/issues/3594
+          schema: {
+            type: "object",
+            properties: {
+              rank: { type: "number" },
+              capital: { type: "string" },
+              country: { type: "string" },
+              population: { type: "string" },
+            },
+            required: ["rank", "capital", "country", "population"],
+          },
+        },
+      },
     },
     responses: {
       201: {
@@ -119,8 +133,22 @@ app.openapi(
     ],
     requestBody: {
       required: true,
-      // https://github.com/honojs/hono/issues/3594
-      content: { "application/json": { schema: { type: "object" } } },
+      content: {
+        "application/json": {
+          // I wanted to use dynamic zod schema but had to do it manually
+          // https://github.com/honojs/hono/issues/3594
+          schema: {
+            type: "object",
+            properties: {
+              rank: { type: "number" },
+              capital: { type: "string" },
+              country: { type: "string" },
+              population: { type: "string" },
+            },
+            required: ["rank", "capital", "country", "population"],
+          },
+        },
+      },
     },
     responses: {
       200: { description: "OK" },
